@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-
+    const HTML = document.querySelector('html');
     const body = document.body;
     const html = document.documentElement;
     const overflowHidden = 'oveflowHidden';
@@ -150,4 +150,175 @@ document.addEventListener("DOMContentLoaded", function() {
     upBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    const menuBtn = document.querySelector('.burger');
+    const menuWrapper = document.querySelector('.menu_burger');
+    const menuClose = document.querySelector('.menuClose');
+    const openedMenu = 'opened';
+
+    if (!menuBtn || !menuWrapper || !menuClose) return;
+
+    menuBtn.addEventListener('click', function() {
+        menuWrapper.classList.toggle(openedMenu);
+        menuBtn.classList.toggle(openedMenu);
+        HTML.classList.toggle(overflowHidden);
+    });
+
+    menuClose.addEventListener('click', function() {
+        menuWrapper.classList.remove(openedMenu);
+        menuBtn.classList.remove(openedMenu);
+        HTML.classList.remove(overflowHidden);
+    });
+
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.burger') || e.target.closest('.menu_scroll')) return;
+
+        if (menuWrapper.classList.contains(openedMenu)) {
+            menuWrapper.classList.remove(openedMenu);
+            menuBtn.classList.remove(openedMenu);
+            HTML.classList.remove(overflowHidden);
+        }
+    });
+
+
+
+    const searchData = [
+        'Текуст и что то по запросу',
+        'Текуст и что то по запрос рограмма комплексного ультразвукового обследования',
+        'Текуст и что то по запрос рограмма комплексного ультразвукового исследования органов',
+        'Текстовый документ по медицинским исследованиям',
+        'Текстиль и материалы для производства',
+        'Технологии обработки данных',
+        'Тестирование программного обеспечения',
+        'Территориальное планирование городов',
+        'Теоретические основы физики',
+        'Телекоммуникационные системы связи'
+    ];
+
+    const searchInput = document.getElementById('searchInput');
+    const seachBtn = document.querySelector('.seach_btn');
+    const searchContainer = document.querySelector('.search-container');
+
+    seachBtn.addEventListener('click', () => {
+        searchContainer.classList.toggle('opened');
+    });
+
+    if(searchInput) {
+        const dropdown = document.querySelector('.dropdown');
+
+        function normalizeText(text) {
+            return text.toLowerCase().trim();
+        }
+
+        function highlightMatch(text, query) {
+            if (!query) return text;
+            
+            const regex = new RegExp(`(${query})`, 'gi');
+            return text.replace(regex, '<strong>$1</strong>');
+        }
+
+        function filterResults(query) {
+            if (!query || query.length === 0) {
+                return [];
+            }
+
+            const normalizedQuery = normalizeText(query);
+            
+            return searchData.filter(item => {
+                return normalizeText(item).includes(normalizedQuery);
+            });
+        }
+
+        function displayResults(results, query) {
+            dropdown.innerHTML = '';
+
+            if (results.length === 0) {
+                if (query.length > 0) {
+                    dropdown.innerHTML = '<div class="dropdown-item no-results">Ничего не найдено</div>';
+                    dropdown.style.display = 'block';
+                } else {
+                    dropdown.style.display = 'none';
+                }
+                return;
+            }
+
+            results.forEach(result => {
+                const item = document.createElement('div');
+                item.className = 'dropdown-item';
+                item.innerHTML = highlightMatch(result, query);
+                
+                item.addEventListener('click', () => {
+                    searchInput.value = result;
+                    dropdown.style.display = 'none';
+                });
+
+                dropdown.appendChild(item);
+            });
+
+            dropdown.style.display = 'block';
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value;
+            const results = filterResults(query);
+            displayResults(results, query);
+        });
+
+        searchInput.addEventListener('focus', () => {
+            const query = searchInput.value;
+            if (query.length > 0) {
+                const results = filterResults(query);
+                displayResults(results, query);
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.search-wrapper')) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        let selectedIndex = -1;
+
+        searchInput.addEventListener('keydown', (e) => {
+            const items = dropdown.querySelectorAll('.dropdown-item:not(.no-results)');
+            
+            if (items.length === 0) return;
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                selectedIndex = (selectedIndex + 1) % items.length;
+                updateSelection(items);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                selectedIndex = selectedIndex <= 0 ? items.length - 1 : selectedIndex - 1;
+                updateSelection(items);
+            } else if (e.key === 'Enter') {
+                e.preventDefault();
+                if (selectedIndex >= 0 && selectedIndex < items.length) {
+                    items[selectedIndex].click();
+                }
+            } else if (e.key === 'Escape') {
+                dropdown.style.display = 'none';
+                selectedIndex = -1;
+            }
+        });
+
+        function updateSelection(items) {
+            items.forEach((item, index) => {
+                if (index === selectedIndex) {
+                    item.classList.add('selected');
+                    item.scrollIntoView({ block: 'nearest' });
+                } else {
+                    item.classList.remove('selected');
+                }
+            });
+        }
+
+        if (searchInput.value) {
+            const results = filterResults(searchInput.value);
+            displayResults(results, searchInput.value);
+        }
+    }
+
 });

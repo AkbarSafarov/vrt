@@ -2772,3 +2772,240 @@ img, textarea, input, table {
 
 
 
+
+.menu_burger {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1001;
+    transition: all 0.3s;
+    visibility: hidden;
+    font-size: 0;
+    opacity: 0;
+    backdrop-filter: blur(2px);
+    overflow: hidden
+}
+
+@media (max-width: 640px) {
+    .menu_burger {
+        top:74rem;
+        background: none
+    }
+}
+
+.menu_burger .menu_scroll {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(66, 43, 114, 0.9);
+    width: 330px;
+    transform: translate(100%,0%);
+    transition: all 0.3s;
+    overflow-y: auto;
+}
+
+@media (max-width: 640px) {
+    .menu_burger .menu_scroll {
+        width:100%
+    }
+}
+
+.menu_burger.opened {
+    opacity: 1;
+    visibility: visible
+}
+
+.menu_burger.opened .menu_scroll {
+    transform: translate(0%,0%)
+}
+
+.menu_burger .menuClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='19.6157' y='6.53858' width='18.4939' height='0.711303' transform='rotate(135 19.6157 6.53858)' fill='white'/%3E%3Crect x='7.04151' y='6.03561' width='18.4939' height='0.711304' transform='rotate(45 7.04151 6.03561)' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat;
+    z-index: 1
+}
+
+@media (max-width: 640px) {
+    .menu_burger .menuClose {
+        display:none
+    }
+}
+
+.menu_burger .menu_items {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 36px;
+
+    ul  {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            border-bottom: 1px solid rgba(124, 101, 172, 1);
+
+            a {
+                display: block;
+                padding: 18px 0;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 20px;
+                color: #fff;
+                text-transform: uppercase;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+// Variables
+$primary-color: #D4A574;
+$text-color: #000000;
+$border-color: #CCCCCC;
+$hover-bg: #F5F5F5;
+$bg-light: #F9F9F9;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin transition($property: all) {
+    transition: $property 0.2s ease;
+}
+
+.search-container {
+    max-width: 100%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+
+    &.opened {
+        display: block;
+    }
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.search-box {
+    @include flex-center;
+    position: relative;
+    background: white;
+    border: 2px solid $border-color;
+    border-radius: 4px;
+    padding: 6px 13px;
+    @include transition(border-color);
+
+
+    &:focus-within {
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+    }
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: var(--font2);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 36px;
+    letter-spacing: 0%;
+
+    &::placeholder {
+        color: #999999;
+    }
+}
+
+.search-button {
+    @include flex-center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: 12px;
+    @include transition(transform);
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.search-icon {
+    width: 32px;
+    height: 32px;
+    color: $primary-color;
+    stroke-width: 2.5;
+}
+
+// Dropdown
+.dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 400px;
+    z-index: 100;
+    display: none;
+}
+
+.dropdown-item {
+    padding: 10px 10px;
+    font-size: 14px;
+    color: $text-color;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(196, 196, 196, 1);
+
+    &.no-results {
+        color: #999999;
+        cursor: default;
+        text-align: center;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    strong {
+        color: $primary-color;
+        font-weight: 600;
+    }
+}
+
