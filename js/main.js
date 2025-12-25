@@ -123,19 +123,55 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    const videoBlock = document.querySelector('.video_block');
-    const video = videoBlock.querySelector('video');
-    const playBtn = videoBlock.querySelector('.btn_play');
+    const videoBlockItem = document.querySelectorAll('.video_block');
 
-    playBtn.addEventListener('click', () => {
-        video.play();
-        playBtn.style.display = 'none'; 
-        video.setAttribute('controls', 'controls'); 
-    });
-
-    video.addEventListener('ended', () => {
-        playBtn.style.display = 'flex';
-    });
+    if(videoBlockItem.length) {
+        videoBlockItem.forEach(videoBlock => {
+            const playBtn = videoBlock.querySelector('.btn_play');
+            const type = videoBlock.dataset.type;
+            
+            if (type === 'youtube') {
+                const youtubeId = videoBlock.dataset.youtubeId;
+                
+                playBtn.addEventListener('click', () => {
+                    const iframe = document.createElement('iframe');
+                    iframe.setAttribute('src', `https://www.youtube.com/embed/${youtubeId}?autoplay=1`);
+                    iframe.setAttribute('frameborder', '0');
+                    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                    iframe.setAttribute('allowfullscreen', '');
+                    
+                    videoBlock.querySelector('.youtube_thumbnail').replaceWith(iframe);
+                    playBtn.style.display = 'none';
+                    videoBlock.classList.add('play');
+                    videoBlock.querySelector('&:before')?.remove();
+                });
+                
+            } else {
+                const video = videoBlock.querySelector('video');
+                
+                playBtn.addEventListener('click', () => {
+                    video.play();
+                    playBtn.style.display = 'none'; 
+                    videoBlock.classList.add('play');
+                    video.setAttribute('controls', 'controls');
+                });
+                
+                video.addEventListener('ended', () => {
+                    playBtn.style.display = 'flex';
+                });
+                
+                video.addEventListener('pause', () => {
+                    if (!video.ended) {
+                        playBtn.style.display = 'flex';
+                    }
+                });
+                
+                video.addEventListener('play', () => {
+                    playBtn.style.display = 'none';
+                });
+            }
+        });
+    }
 
     const upBtn = document.querySelector('.up_btn');
 

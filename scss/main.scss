@@ -1368,6 +1368,9 @@ img, textarea, input, table {
 
         .body {
             position: relative;
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
 
             &:before {
                 content: '';
@@ -1385,6 +1388,7 @@ img, textarea, input, table {
                 z-index: 2;
                 padding: 16px 15px 16px;
                 background: #fff;
+                flex: 1 1 auto;
 
                 .name {
                     min-height: 48px;
@@ -1751,7 +1755,6 @@ img, textarea, input, table {
     .inner {
         display: flex;
         gap: 30px;
-        align-items: start;
 
         @media all and (max-width: 1340px) {
             margin-right: -20px;
@@ -1774,6 +1777,8 @@ img, textarea, input, table {
             position: relative;
             padding: 15px 16px 0;
             flex: 0 0 calc(25% - 24px);
+            display: flex;
+            flex-direction: column;
 
             > div {
                 position: relative;
@@ -1798,6 +1803,7 @@ img, textarea, input, table {
 
             .name {
                 padding: 10px;
+                flex: 1 1 auto; 
 
                 a {
                     text-decoration: none;
@@ -1880,7 +1886,8 @@ img, textarea, input, table {
         .video_block {
             flex: 0 0 calc(45% - 18px);
             position: relative;
-
+            overflow: hidden;
+            
             &:before {
                 content: '';
                 position: absolute;
@@ -1890,8 +1897,16 @@ img, textarea, input, table {
                 right: 0;
                 background: #422B72;
                 opacity: .42;
+                z-index: 1;
+                pointer-events: none;
             }
 
+            &.play {
+                &:before{
+                    display: none;
+                }
+            }
+            
             .btn_play {
                 position: absolute;
                 top: 0;
@@ -1905,12 +1920,31 @@ img, textarea, input, table {
                 border-radius: 50%;
                 margin: auto;
                 cursor: pointer;
+                z-index: 2;
+                transition: transform 0.3s ease;
+                
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
-
-            video {
+            
+            video,
+            .youtube_thumbnail,
+            iframe {
                 width: 100%;
                 height: 307px;
                 object-fit: cover;
+                display: block;
+            }
+            
+            .youtube_thumbnail {
+                position: relative;
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
         }
 
@@ -2354,6 +2388,8 @@ img, textarea, input, table {
 }
 
 .footer {
+    background: none !important;
+    padding: 0 !important;
 
     .block_inner {
         display: flex;
@@ -2404,7 +2440,8 @@ img, textarea, input, table {
                 margin-bottom: 9px;
             }
 
-            > ul {
+            > ul, 
+            div > ul {
                 padding: 0;
                 margin: 0;
                 list-style: none;
@@ -2460,7 +2497,8 @@ img, textarea, input, table {
             flex: 0 0 200px;
             padding-top: 33px;
 
-            > ul {
+            > ul, 
+            div > ul {
                 padding: 0;
                 margin: 0 0 9px;
                 list-style: none;
@@ -2791,7 +2829,7 @@ img, textarea, input, table {
 
 @media (max-width: 640px) {
     .menu_burger {
-        top:74rem;
+        
         background: none
     }
 }
@@ -2837,7 +2875,7 @@ img, textarea, input, table {
 
 @media (max-width: 640px) {
     .menu_burger .menuClose {
-        display:none
+        
     }
 }
 
