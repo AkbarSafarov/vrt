@@ -357,4 +357,37 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    
+    const dropdownField = document.querySelectorAll('.dropdown-field');
+
+    if(dropdownField.length) {
+        dropdownField.forEach(dropdown => {
+            const name = dropdown.querySelector('.name');
+            const list = dropdown.querySelector('.list');
+
+            name.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = dropdown.classList.contains('open');
+
+                document.querySelectorAll('.dropdown-field.open').forEach(d => d.classList.remove('open'));
+
+                if (!isOpen) dropdown.classList.add('open');
+            });
+
+            list.querySelectorAll('li').forEach(li => {
+                li.addEventListener('click', () => {
+                    list.querySelectorAll('li.active').forEach(el => el.classList.remove('active'));
+                    li.classList.add('active');
+
+                    name.textContent = li.textContent;
+
+                    dropdown.classList.remove('open');
+                });
+            });
+        });
+
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.dropdown-field.open').forEach(d => d.classList.remove('open'));
+        });
+    }
 });

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тайтл</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.css" integrity="sha512-nF9G9AnUEVv+zx285OqwGE8c1gmkys3qV6iuDK5rVG/UuZLWRgGBy/tN5WzSXXuZDZ1YvwhJ9+a/DTj71L8Lrw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<link rel="stylesheet" href="css/lightgallery.css">
+<link rel="stylesheet" href="css/main.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="menu_burger">
+<div class="menuClose"></div>
+<div class="menu_scroll">
+<div class="menu_items">
+<ul>
+<li><a href="">УСЛУГИ</a></li>
+<li><a href="">ДИАГНОСТИКА</a></li>
+<li><a href="">ЦЕНЫ</a></li>
+<li><a href="">ВРАЧИ</a></li>
+<li><a href="">СПЕЦАПЕДЛОЖЕНИЯ</a></li>
+<li><a href="">СТАТЬИ</a></li>
+<li><a href="">О ЦЕНТРЕ</a></li>
+<li><a href="">ОТЗЫВЫ</a></li>
+<li><a href="">КОНТАКТЫ</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="search-container">
+<div class="search-wrapper">
+<div class="search-box">
+<input type="text" class="search-input" placeholder="Поиск" value="" id="searchInput">
+<button class="search-button">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11.7664" cy="11.7666" r="8.98856" stroke="#D9A676" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M18.0181 18.4851L21.5421 22" stroke="#D9A676" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+</button>
+</div>
+<div class="dropdown"></div>
+</div>
+</div>
+<div class="site_wrapper">
+<header class="header">
+<div class="header_top content-padding">
+<div class="block_inner">
+<div class="logo">
+<a href="">
+<img src="files/logo.png" alt="">
+</a>
+</div>
+<div class="contacts_header">
+<div class="address">г. Москва ул. Бауманская,21 </div>
+<div class="phones">
+<div>
+<a href="tel:88002224058">8 (800) 222-40-58</a>
+</div>
+<div>
+<a href="tel:84992880645">8 (499) 288-06-45</a>
+</div>
+<a href="" class="wh">
+<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.086 0C5.41125 0 0 5.41125 0 12.086C0 14.7544 0.865547 17.2209 2.33016 19.2206L0.788203 23.779L5.59125 22.2792C7.46719 23.4766 9.69539 24.1713 12.086 24.1713C18.7608 24.1713 24.172 18.7601 24.172 12.0853C24.172 5.41055 18.7608 0 12.086 0Z" fill="#4CAF50" />
+<path d="M11.0798 14.1012C10.3458 13.5429 8.60133 11.4595 8.64914 11.0384C8.69695 10.6172 9.93797 9.72703 9.92602 9.22922C9.91406 8.73141 8.80734 5.52445 7.80188 5.51461C6.79641 5.50476 4.9493 6.65086 5.07656 8.92266C5.20383 11.1945 7.09312 14.258 9.95203 16.4278C12.8109 18.5977 15.4273 19.4484 17.6231 18.5723C19.5666 17.7968 19.5954 15.7964 19.3268 15.4519C19.0589 15.1073 16.3723 13.7735 15.8808 13.8691C15.3893 13.9648 14.8753 15.5187 14.1005 15.6241C13.3256 15.7282 11.8139 14.6595 11.0798 14.1012Z" fill="white" />
+</svg>
+</a>
+</div>
+</div>
+<div class="btn_button">
+<span class="pc">Записаться на прием</span>
+<span class="mob">Записаться</span>
+</div>
+</div>
+</div>
+<div class="header_bottom content-padding">
+<div class="block_inner">
+<div class="logo">
+<a href="">
+<img src="files/logo.png" alt="">
+</a>
+</div>
+<div class="menu_header">
+<ul>
+<li><a href="">УСЛУГИ</a></li>
+<li><a href="">ДИАГНОСТИКА</a></li>
+<li><a href="">ЦЕНЫ</a></li>
+<li><a href="">ВРАЧИ</a></li>
+<li><a href="">СПЕЦАПЕДЛОЖЕНИЯ</a></li>
+<li><a href="">СТАТЬИ</a></li>
+<li><a href="">О ЦЕНТРЕ</a></li>
+<li><a href="">ОТЗЫВЫ</a></li>
+<li><a href="">КОНТАКТЫ</a></li>
+</ul>
+</div>
+<div class="search_block">
+<div class="seach_btn"></div>
+<form action="">
+<input type="text" placeholder="Поиск">
+<button></button>
+</form>
+</div>
+<div class="burger"></div>
+</div>
+</div>
+</header>
+<div class="content_block_wr"><link rel="stylesheet" href="css/specialists.css">
+<div class="content_block_inner">
+<div class="block_inner">
+<div class="path_block"><a href="">Главная</a><span></span><a href=""> О клинике</a><span></span>Специалисты</div>
+<div class="h1_title">
+<h1>Специалисты</h1>
+<div class="filter_block">
+<div class="field">
+<div class="dropdown-field">
+<div class="name">ФИО</div>
+<div class="list">
+<ul>
+<li>Абдуллаева Марзи Абдурахмановна</li>
+<li>Абросимов Станислав Сергеевич</li>
+<li>Анкина Олеся Анатольевна</li>
+<li>Атаян Наре Спартаковна</li>
+<li>Ахматова Хеда Ризвановна</li>
+<li>Варламова Екатерина Михайловна</li>
+<li>Вашкевич Ирина Владимировна</li>
+<li>Вершута Елена Васильевна</li>
+<li>Дашко Антон Александрович</li>
+<li>Ерофеевская Татьяна Николаевна</li>
+<li>Есакова Антонина Павловна</li>
+<li>Зинченко Нина Аркадьевна</li>
+<li>Крастынь Эллина Андреевна</li>
+<li>Кумачев Кирилл Васильевич</li>
+<li>Лебедева Марина Юрьевна</li>
+<li>Михеева Елена Владимировна</li>
+<li>Перминова Лилия Ризвановна</li>
+<li>Румянцева Виктория Алексеевна</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="field">
+<div class="dropdown-field">
+<div class="name">Направление</div>
+<div class="list">
+<ul>
+<li>Направление</li>
+<li>Направление</li>
+<li>Направление которое может быть на две строки ( ховер)</li>
+<li>Направление</li>
+<li>Направление</li>
+<li>Направление</li>
+</ul>
+</div>
+</div>
+</div>
+<button class="btn_button border">Найти</button>
+</div>
+</div>
+<div class="specialists_list">
+<div class="item">
+<div class="image" style="background-image: url(files/d2.png);">
+<img src="img/icon1.svg" alt="">
+</div>
+<div class="body">
+<a href="" class="more_link">Подробнее о враче</a>
+<div class="inner">
+<div class="name">
+<a href="">Соколова Елена Анатольевна</a>
+</div>
+<div class="text">Врач акушер-гинеколог, репродуктолог</div>
+<div class="age">Стаж 12 лет</div>
+</div>
+<a href="" class="btn_button btn-z">Записаться на прием</a>
+</div>
+</div>
+<div class="item">
+<div class="image" style="background-image: url(files/d2-1.jpg);">
+<img src="files/icon1.svg" alt="">
+</div>
+<div class="body">
+<a href="" class="more_link">Подробнее о враче</a>
+<div class="inner">
+<div class="name">
+<a href="">Перминова Лилия Ризвановна</a>
+</div>
+<div class="text">Врач акушер-гинеколог, репродуктолог</div>
+<div class="age">Стаж 12 лет</div>
+</div>
+<a href="" class="btn_button btn-z">Записаться на прием</a>
+</div>
+</div>
+<div class="item">
+<div class="image" style="background-image: url(files/d2-2.jpg);">
+<img src="files/icon1.svg" alt="">
+</div>
+<div class="body">
+<a href="" class="more_link">Подробнее о враче</a>
+<div class="inner">
+<div class="name">
+<a href="">Соколова Елена Анатольевна</a>
+</div>
+<div class="text">Врач акушер-гинеколог, репродуктолог</div>
+<div class="age">Стаж 12 лет</div>
+</div>
+<a href="" class="btn_button btn-z">Записаться на прием</a>
+</div>
+</div>
+<div class="item">
+<div class="image" style="background-image: url(files/d2-3.jpg);">
+<img src="files/icon1.svg" alt="">
+</div>
+<div class="body">
+<a href="" class="more_link">Подробнее о враче</a>
+<div class="inner">
+<div class="name">
+<a href="">Соколова Елена Анатольевна</a>
+</div>
+<div class="text">Врач акушер-гинеколог, репродуктолог</div>
+<div class="age">Стаж 12 лет</div>
+</div>
+<a href="" class="btn_button btn-z">Записаться на прием</a>
+</div>
+</div>
+<div class="item">
+<div class="image" style="background-image: url(files/d2-4.jpg);">
+<img src="files/icon1.svg" alt="">
+</div>
+<div class="body">
+<a href="" class="more_link">Подробнее о враче</a>
+<div class="inner">
+<div class="name">
+<a href="">Соколова Елена Анатольевна</a>
+</div>
+<div class="text">Врач акушер-гинеколог, репродуктолог</div>
+<div class="age">Стаж 12 лет</div>
+</div>
+<a href="" class="btn_button btn-z">Записаться на прием</a>
+</div>
+</div>
+<div class="item">
+<div class="image" style="background-image: url(files/d2-5.jpg);">
+<img src="files/icon1.svg" alt="">
+</div>
+<div class="body">
+<a href="" class="more_link">Подробнее о враче</a>
+<div class="inner">
+<div class="name">
+<a href="">Соколова Елена Анатольевна</a>
+</div>
+<div class="text">Врач акушер-гинеколог, репродуктолог</div>
+<div class="age">Стаж 12 лет</div>
+</div>
+<a href="" class="btn_button btn-z">Записаться на прием</a>
+</div>
+</div>
+<div class="item">
+<div class="image" style="background-image: url(files/d2-6.jpg);">
+<img src="files/icon1.svg" alt="">
+</div>
+<div class="body">
+<a href="" class="more_link">Подробнее о враче</a>
+<div class="inner">
+<div class="name">
+<a href="">Соколова Елена Анатольевна</a>
+</div>
+<div class="text">Врач акушер-гинеколог, репродуктолог</div>
+<div class="age">Стаж 12 лет</div>
+</div>
+<a href="" class="btn_button btn-z">Записаться на прием</a>
+</div>
+</div>
+<div class="item">
+<div class="image" style="background-image: url(files/d2-7.jpg);">
+<img src="files/icon1.svg" alt="">
+</div>
+<div class="body">
+<a href="" class="more_link">Подробнее о враче</a>
+<div class="inner">
+<div class="name">
+<a href="">Соколова Елена Анатольевна</a>
+</div>
+<div class="text">Врач акушер-гинеколог, репродуктолог</div>
+<div class="age">Стаж 12 лет</div>
+</div>
+<a href="" class="btn_button btn-z">Записаться на прием</a>
+</div>
+</div>
+<div class="item">
+<div class="image" style="background-image: url(files/d2-1.jpg);">
+<img src="files/icon1.svg" alt="">
+</div>
+<div class="body">
+<a href="" class="more_link">Подробнее о враче</a>
+<div class="inner">
+<div class="name">
+<a href="">Соколова Елена Анатольевна</a>
+</div>
+<div class="text">Врач акушер-гинеколог, репродуктолог</div>
+<div class="age">Стаж 12 лет</div>
+</div>
+<a href="" class="btn_button btn-z">Записаться на прием</a>
+</div>
+</div>
+<div class="item">
+<div class="image" style="background-image: url(files/d2-2.jpg);">
+<img src="files/icon1.svg" alt="">
+</div>
+<div class="body">
+<a href="" class="more_link">Подробнее о враче</a>
+<div class="inner">
+<div class="name">
+<a href="">Соколова Елена Анатольевна</a>
+</div>
+<div class="text">Врач акушер-гинеколог, репродуктолог</div>
+<div class="age">Стаж 12 лет</div>
+</div>
+<a href="" class="btn_button btn-z">Записаться на прием</a>
+</div>
+</div>
+<div class="item">
+<div class="image" style="background-image: url(files/d2-3.jpg);">
+<img src="files/icon1.svg" alt="">
+</div>
+<div class="body">
+<a href="" class="more_link">Подробнее о враче</a>
+<div class="inner">
+<div class="name">
+<a href="">Соколова Елена Анатольевна</a>
+</div>
+<div class="text">Врач акушер-гинеколог, репродуктолог</div>
+<div class="age">Стаж 12 лет</div>
+</div>
+<a href="" class="btn_button btn-z">Записаться на прием</a>
+</div>
+</div>
+<div class="item">
+<div class="image" style="background-image: url(files/d2-4.jpg);">
+<img src="files/icon1.svg" alt="">
+</div>
+<div class="body">
+<a href="" class="more_link">Подробнее о враче</a>
+<div class="inner">
+<div class="name">
+<a href="">Соколова Елена Анатольевна</a>
+</div>
+<div class="text">Врач акушер-гинеколог, репродуктолог</div>
+<div class="age">Стаж 12 лет</div>
+</div>
+<a href="" class="btn_button btn-z">Записаться на прием</a>
+</div>
+</div>
+</div>
+<div class="page_list">
+<ul>
+<li class="prev"><a href=""></a></li>
+<li class="number"><a href="">1</a></li>
+<li class="number"><a href="">2</a></li>
+<li class="dots"><span>...</span></li>
+<li class="number"><span>7</span></li>
+<li class="number"><a href="">8</a></li>
+<li class="next"><a href=""></a></li>
+</ul>
+</div>
+<div class="btn_button btn_load_more">Показать еще</div>
+</div>
+</div></div>
+<footer class="footer">
+<div class="content-padding">
+<div class="block_inner">
+<div class="left">
+<div class="logo">
+<a href="">
+<img src="files/logo.png" alt="">
+</a>
+</div>
+<div class="time">
+<p>Понедельник-пятница: <strong>с 9:00 до 20:00</strong></p>
+<p>Суббота: <strong>с 10:00 до 18:00</strong></p>
+<p>Воскресенье: <strong>с 10:00 до 18:00</strong></p>
+</div>
+</div>
+<div class="service">
+<div class="name">Услуги </div>
+<ul>
+<li>
+<a href="">Программы ЭКО</a>
+<ul>
+<li><a href="">ЭКО</a></li>
+<li><a href="">ИКСИ</a></li>
+<li><a href="">Хетчинг</a></li>
+<li><a href="">Криоконсервация ооцитов</a></li>
+<li><a href="">Криоконсервация спермы</a></li>
+<li><a href="">ЭКО по ОМС </a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="links">
+<ul>
+<li><a href="">Лечение бесплодия</a></li>
+<li><a href="">Донорские программы</a></li>
+<li><a href="">Суррогатное материнство</a></li>
+<li><a href="">Гинекология</a></li>
+</ul>
+<div class="soc_block">
+<a href="">
+<img src="files/soc1.svg" alt="">
+</a>
+<a href="">
+<img src="files/tg.svg" alt="">
+</a>
+<a href="">
+<img src="files/vk.svg" alt="">
+</a>
+</div>
+</div>
+<div class="contacts_footer">
+<div class="title">Контакты</div>
+<div class="address">г. Москва ул. Бауманская,21   </div>
+<div class="phones">
+<div>
+<a href="tel:88002224058">8 (800) 222-40-58</a>
+</div>
+<div>
+<a href="tel:84992880645">8 (499) 288-06-45</a>
+</div>
+<a href="" class="wh">
+<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.086 0C5.41125 0 0 5.41125 0 12.086C0 14.7544 0.865547 17.2209 2.33016 19.2206L0.788203 23.779L5.59125 22.2792C7.46719 23.4766 9.69539 24.1713 12.086 24.1713C18.7608 24.1713 24.172 18.7601 24.172 12.0853C24.172 5.41055 18.7608 0 12.086 0Z" fill="#4CAF50"/>
+<path d="M11.0798 14.1012C10.3458 13.5429 8.60133 11.4595 8.64914 11.0384C8.69695 10.6172 9.93797 9.72703 9.92602 9.22922C9.91406 8.73141 8.80734 5.52445 7.80188 5.51461C6.79641 5.50476 4.9493 6.65086 5.07656 8.92266C5.20383 11.1945 7.09312 14.258 9.95203 16.4278C12.8109 18.5977 15.4273 19.4484 17.6231 18.5723C19.5666 17.7968 19.5954 15.7964 19.3268 15.4519C19.0589 15.1073 16.3723 13.7735 15.8808 13.8691C15.3893 13.9648 14.8753 15.5187 14.1005 15.6241C13.3256 15.7282 11.8139 14.6595 11.0798 14.1012Z" fill="white"/>
+</svg>
+</a>
+</div>
+<div class="soc_block">
+<a href="">
+<img src="files/soc1.svg" alt="">
+</a>
+<a href="">
+<img src="files/tg.svg" alt="">
+</a>
+<a href="">
+<img src="files/vk.svg" alt="">
+</a>
+</div>
+<div class="btns">
+<div class="btn_button call">Записаться на прием</div>
+<div class="btn_button online">Онлайн консультация</div>
+</div>
+</div>          
+</div>
+</div>
+<div class="footer_bottom">
+<div class="inner">© 2025 «За Рождение». Все права защищены  | <a href="">Карта сайта</a>  |  <a href="">Политика конфиденциальности.</a> Лицензия Л041-01137-77/00321328</div>
+</div>
+</footer>
+<div class="up_btn"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js" integrity="sha512-a/KwXZUMuN0N2aqT/nuvYp6mg1zKg8OfvovbIlh4ByLw+BJ4sDrJwQM/iSOd567gx+yS0pQixA4EnxBlHgrL6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/lightgallery-all.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
