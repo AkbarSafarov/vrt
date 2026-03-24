@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тайтл</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.css" integrity="sha512-nF9G9AnUEVv+zx285OqwGE8c1gmkys3qV6iuDK5rVG/UuZLWRgGBy/tN5WzSXXuZDZ1YvwhJ9+a/DTj71L8Lrw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<link rel="stylesheet" href="css/lightgallery.css">
+<link rel="stylesheet" href="css/main.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="menu_burger">
+<div class="menuClose"></div>
+<div class="menu_scroll">
+<div class="menu_items">
+<ul>
+<li><a href="">УСЛУГИ</a></li>
+<li><a href="">ДИАГНОСТИКА</a></li>
+<li><a href="">ЦЕНЫ</a></li>
+<li><a href="">ВРАЧИ</a></li>
+<li><a href="">СПЕЦАПЕДЛОЖЕНИЯ</a></li>
+<li><a href="">СТАТЬИ</a></li>
+<li><a href="">О ЦЕНТРЕ</a></li>
+<li><a href="">ОТЗЫВЫ</a></li>
+<li><a href="">КОНТАКТЫ</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="search-container">
+<div class="search-wrapper">
+<div class="search-box">
+<input type="text" class="search-input" placeholder="Поиск" value="" id="searchInput">
+<button class="search-button">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11.7664" cy="11.7666" r="8.98856" stroke="#D9A676" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M18.0181 18.4851L21.5421 22" stroke="#D9A676" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+</button>
+</div>
+<div class="dropdown"></div>
+</div>
+</div>
+<div class="site_wrapper">
+<header class="header">
+<div class="header_top content-padding">
+<div class="block_inner">
+<div class="logo">
+<a href="">
+<img src="files/logo.png" alt="">
+</a>
+</div>
+<div class="contacts_header">
+<div class="address">г. Москва ул. Бауманская,21 </div>
+<div class="phones">
+<div>
+<a href="tel:88002224058">8 (800) 222-40-58</a>
+</div>
+<div>
+<a href="tel:84992880645">8 (499) 288-06-45</a>
+</div>
+<a href="" class="wh">
+<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.086 0C5.41125 0 0 5.41125 0 12.086C0 14.7544 0.865547 17.2209 2.33016 19.2206L0.788203 23.779L5.59125 22.2792C7.46719 23.4766 9.69539 24.1713 12.086 24.1713C18.7608 24.1713 24.172 18.7601 24.172 12.0853C24.172 5.41055 18.7608 0 12.086 0Z" fill="#4CAF50" />
+<path d="M11.0798 14.1012C10.3458 13.5429 8.60133 11.4595 8.64914 11.0384C8.69695 10.6172 9.93797 9.72703 9.92602 9.22922C9.91406 8.73141 8.80734 5.52445 7.80188 5.51461C6.79641 5.50476 4.9493 6.65086 5.07656 8.92266C5.20383 11.1945 7.09312 14.258 9.95203 16.4278C12.8109 18.5977 15.4273 19.4484 17.6231 18.5723C19.5666 17.7968 19.5954 15.7964 19.3268 15.4519C19.0589 15.1073 16.3723 13.7735 15.8808 13.8691C15.3893 13.9648 14.8753 15.5187 14.1005 15.6241C13.3256 15.7282 11.8139 14.6595 11.0798 14.1012Z" fill="white" />
+</svg>
+</a>
+</div>
+</div>
+<div class="btn_button">
+<span class="pc">Записаться на прием</span>
+<span class="mob">Записаться</span>
+</div>
+</div>
+</div>
+<div class="header_bottom content-padding">
+<div class="block_inner">
+<div class="logo">
+<a href="">
+<img src="files/logo.png" alt="">
+</a>
+</div>
+<div class="menu_header">
+<ul>
+<li><a href="">УСЛУГИ</a></li>
+<li><a href="">ДИАГНОСТИКА</a></li>
+<li><a href="">ЦЕНЫ</a></li>
+<li><a href="">ВРАЧИ</a></li>
+<li><a href="">СПЕЦАПЕДЛОЖЕНИЯ</a></li>
+<li><a href="">СТАТЬИ</a></li>
+<li><a href="">О ЦЕНТРЕ</a></li>
+<li><a href="">ОТЗЫВЫ</a></li>
+<li><a href="">КОНТАКТЫ</a></li>
+</ul>
+</div>
+<div class="search_block">
+<div class="seach_btn"></div>
+<form action="">
+<input type="text" placeholder="Поиск">
+<button></button>
+</form>
+</div>
+<div class="burger"></div>
+</div>
+</div>
+</header>
+<div class="content_block_wr"><link rel="stylesheet" href="css/specialists.css">
+<link rel="stylesheet" href="css/card-page.css">
+<div class="content_block_inner">
+<div class="block_inner">
+<div class="path_block"><a href="">Главная</a><span></span><a href=""> О клинике</a><span></span>Специалисты</div>
+<div class="header-card">
+<div class="container">
+<div class="header-content">
+<div class="doctor-photo">
+<img src="files/card.jpg" alt="Акина Олеся Анатольевна">
+</div>
+<div class="doctor-info">
+<div class="h1_title">
+<h1>Акина Олеся Анатольевна</h1>
+</div>
+<p class="specialty">Врач акушер-гинеколог, врач-репродуктолог, врач ультразвуковой диагностики</p>
+<button class="btn-primary">
+<span>Записаться на прием</span>
+<svg width="81" height="15" viewBox="0 0 81 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M80.7071 8.07107C81.0976 7.68055 81.0976 7.04739 80.7071 6.65686L74.3431 0.2929C73.9526 -0.0976243 73.3195 -0.0976243 72.9289 0.2929C72.5384 0.683424 72.5384 1.31659 72.9289 1.70711L78.5858 7.36397L72.9289 13.0208C72.5384 13.4113 72.5384 14.0445 72.9289 14.435C73.3195 14.8256 73.9526 14.8256 74.3431 14.435L80.7071 8.07107ZM0 7.36397V8.36397H80V7.36397V6.36397H0V7.36397Z" fill="white" />
+</svg>
+</button>
+<div class="experience-box">
+<div class="experience-badge">Стаж 27 лет</div>
+<p class="experience-text">Врач акушер-гинеколог, врач-репродуктолог, врач ультразвуковой диагностики, член Российской и Европейской Ассоциация Репродукции Человека.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="tabs-section">
+<div class="container">
+<div class="tabs">
+<button class="tab active" data-tab="experience">Опыт работы<i></i></button>
+<button class="tab" data-tab="specialization">Специализация<i></i></button>
+<button class="tab" data-tab="reviews">Отзывы<i></i></button>
+<button class="tab" data-tab="certificates">Сертификаты<i></i></button>
+</div>
+</div>
+<div class="container">
+<!-- Tab 1: Experience -->
+<div id="experience" class="tab-content active">
+<div class="content-grid">
+<div class="column">
+<h2>Образование</h2>
+<ul class="content-list">
+<li>В 2000 году с отличием окончила ГБОУ ВПО РНИМУ им. Н.И.Пирогова.</li>
+<li>В 2002 году окончила клиническую ординатуру на базе гинекологического отделения и родильного дома ГКБ № 1 г. Москвы.</li>
+<li>В 2005 окончила аспирантуру на базе ГБОУ ВПО РНИМУ им. Н.И.Пирогова.</li>
+</ul>
+<h2>Научная деятельность</h2>
+<ul class="content-list">
+<li>победитель всероссийского конкурса молодых ученых (2004 г.);</li>
+<li>победитель всероссийского конкурса молодых ученых (2005 г.);</li>
+<li>награждена грамотой от управы Северного административного округа г. Москвы за многолетний добросовестный труд и значительный вклад в дело сохранения здоровья москвичей;</li>
+<li>автор и соавтор научных статей с профессиональных журналах;</li>
+<li>ежегодное участие в международных и общероссийских конгрессах и научно-практических конференциях, посвященных акушерству, гинекологии и репродуктивной медицине.</li>
+</ul>
+<h2>Профессиональная деятельность</h2>
+<ul class="content-list">
+<li>С 2000 года врач акушер гинеколог гинекологического отделения и родильного дома ГКБ № 1 г. Москвы.</li>
+<li>С 2003 работала врачом акушером-гинекологом, репродуктологом в СМ-Клиника на ВДНХ.</li>
+<li>С 2007 там же возглавила отделение ЭКО.</li>
+<li>С 2011 заместитель главного врача по клинической работе Клиники Репродуктивной Медицины на базе многопрофильного холдинга СМ-Клиника.</li>
+<li>С 2014 по 2018 заведующая отделением ЭКО Приор-Клиника, врач акушер гинеколог отделения репродуктологии МОНИИАГ.</li>
+<li>С сентября 2018 работает в клинике репродуктологии „За рождение", с 2020 года главный врач в ООО МЕДЭКО, клиника Зарождение.</li>
+</ul>
+</div>
+<div class="column">
+<h2>Курсы повышения квалификации</h2>
+<ul class="content-list">
+<li>В 2000 году с отличием окончила ГБОУ ВПО РНИМУ им. Н.И.Пирогова.</li>
+<li>курс повышения квалификации по акушерству и гинекологии, ГБОУ ДПО РМАПО Минздрава России (2007 г.);</li>
+<li>– курс повышения квалификации по теме «Эндоскопия в акушерстве и гинекологии», ГБОУ ДПО РМАПО Минздрава России (2007 г.);</li>
+<li>– курс повышения квалификации по акушерству и гинекологии ГБОУ ВПО Первый МГМУ им. И.М. Сеченова Минздрава России (2011 г.);</li>
+<li>– курс повышения квалификации по программе «Вспомогательные репродуктивные технологии в лечении женского и мужского бесплодия» в учреждении высшего профессионального образования Первый Московский государственный медицинский университет имени И.М. Сеченова МЗ и социального развития РФ (2011 г.);</li>
+<li>– курс повышения квалификации по акушерству и гинекологии, ГБОУ ДПО РМАПО Минздрава России (2012 г.);</li>
+<li>– курс повышения квалификации по программе «Гинекологическая эндокринология» в НОЧ УДПО «Центр последипломного образования врачей» (2012 г.);</li>
+<li>– курс повышения квалификации по программе «Репродуктивное здоровье семьи – бесплодный брак» в НОЧ УДПО «Центр последипломного образования врачей» (2012 г.);</li>
+<li>– курс повышения квалификации по программе «Эндокринные аспекты репродуктивного здоровья» Факультет повышения квалификации медицинских работников РУДН (2013 г.);</li>
+<li>– курс повышения квалификации по программе «Современные технологии в диагностике и лечении гинекологических заболеваний (с курсом эндоскопии)» МГМСУ (2013 г.);</li>
+<li>– обучение по программе «Вспомогательные репродуктивные технологии в лечении женского и мужского бесплодия» на базе Клинической больницы «Коста Брава», Испания (2013 г.);</li>
+<li>– профессиональная переподготовка в Институте усовершенствования врачей ФГБУ «НМХЦ им. Н.И. Пирогова» по программе ультразвуковая диагностика (2014 г.);</li>
+<li>– профессиональная переподготовка в Институте усовершенствования врачей ФГБУ «Национальный медико-хирургический центр им. Н.И. Пирогова» по программе Организация здравоохранения и общественное здоровье (2014 г.);</li>
+<li>– курс повышения квалификации по программе " Акушерство и гинекология, вопросы эндокринологии" в ГБУЗ МО МОНИКИ им. М.Ф. Владимирского (2017 г.);</li>
+<li>– курс повышения квалификации по программе «Акушерство и гинекология» в Автономной некоммерческой организации дополнительного профессионального образования " Центр повышения квалификации и профессиональной переподготовки" (2020 г.);</li>
+<li>– курс повышения квалификации по программе «Ультразвуковая диагностика » в ЧОУ ДПО «Институт повышения квалификации и современных технологий (2020 г.);</li>
+<li>В 2005 окончила аспирантуру на базе ГБОУ ВПО РНИМУ им. Н.И.Пирогова.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Tab 2: Specialization -->
+<div id="specialization" class="tab-content">
+<div class="specialization-list">
+<div class="spec-item">
+<div class="check-icon"></div>
+<span>ЭКО</span>
+</div>
+<div class="spec-item">
+<div class="check-icon"></div>
+<span>Гинекология</span>
+</div>
+<div class="spec-item">
+<div class="check-icon"></div>
+<span>Интимная пластика</span>
+</div>
+<div class="spec-item">
+<div class="check-icon"></div>
+<span>Урогинекология</span>
+</div>
+</div>
+</div>
+<!-- Tab 3: Reviews -->
+<div id="reviews" class="tab-content">
+<div class="reviews-list">
+<div class="review-card">
+<div class="quote-icon">"</div>
+<div class="review-header">
+<div class="review-meta">
+<h3>Кира</h3>
+<div class="email">df...@gmail.com</div>
+<div class="date">26.01.2026</div>
+</div>
+</div>
+<p class="review-text">Хочу выразить большую благодарность за наше маленькое солнышко чудо под боком Соколовой Елене Анатольевне! А, также всему коллективу клиники! У нас с мужем в течении года не получалось самостоятельно забеременеть. Поэтому было принято решение подать документы на программу ЭКО по ОМС. Из всего списка клиник была выбрана клиника За Рождение, тк посоветовали врача (Соколову Елену Анатольевну). Которая работает в этой клинике. Вступили в протокол в апреле 2025, а в мае уже увидели заветные 2 полоски. У нас получилось с первого раза забеременеть. Спасибо большое врачу-волшебнице Соколовой Елене Анатольевне! Она очень профессиональный, внимательный, отзывчивый и сопереживающий врач. Для нее не важно какой ты пациент: платный или бесплатный. Она одинаково относится к ним. Елене Анатольевне - главное РЕЗУЛЬТАТ! На который она настраивает в течении всей программы. Она поддерживает тебя и постоянно находится на связи, даже когда выпускает своих пациентов для дальнейшего ведения беременности другими акушерами-гинекологами. Она с нетерпением ждет рождения наших деток! И искренне радуется и поздравляет нас их рождением! Не передать словами, как мы с мужем благодарны Елене Анатольевне за ее проделанный труд и поддержку! А, также всему коллективу клиники! Советую всем своим знакомым у кого не получается забеременеть вашу клинику, где работает лично для меня врач от Бога: Соколова Елена Анатольевна! Спасибо Вам большое за нашего сыночка!</p>
+</div>
+<div class="review-card">
+<div class="quote-icon">"</div>
+<div class="review-header">
+<div class="review-meta">
+<h3>Светлана</h3>
+<div class="email">df...@gmail.com</div>
+<div class="date">26.01.2026</div>
+</div>
+</div>
+<p class="review-text">Лечение было не быстрое, зато дало ожидаемый результат) Считаю, что мне повезло попасть к Торгановой, время не стоит на месте, а беременность в браке не наступала более трех лет.</p>
+</div>
+<div class="review-card">
+<div class="quote-icon">"</div>
+<div class="review-header">
+<div class="review-meta">
+<h3>Татьяна</h3>
+<div class="email">df...@gmail.com</div>
+<div class="date">26.01.2026</div>
+</div>
+</div>
+<p class="review-text">Ирина Геннадьевна - тот редкий врач, который сочетает в себе огромный опыт, современные знания и простое человеческое участие. Спасибо за нашу малышку!</p>
+</div>
+<div class="review-card">
+<div class="quote-icon">"</div>
+<div class="review-header">
+<div class="review-meta">
+<h3>Зоя</h3>
+<div class="email">df...@gmail.com</div>
+<div class="date">26.01.2026</div>
+</div>
+</div>
+<p class="review-text">Искала не просто клинику, а именно врача с именем и огромным опытом. Остановилась на кандидате медицинских наук Ирине Геннадьевне Торгановой. Не ошиблась. Первичная консультация длилась почти два часа! Она изучила всю историю, включая неудачные попытки, подробно объяснила свою точку зрения и наметила четкий, персонализированный план. Огромное количество детей, рожденных благодаря ее методикам, говорит само за себя. Она вселяет уверенность с первой встречи. Для связи она также использует WhatsApp.</p>
+</div>
+</div>
+<div class="page_list">
+<ul>
+<li class="prev"><a href=""></a></li>
+<li class="number"><a href="">1</a></li>
+<li class="number"><a href="">2</a></li>
+<li class="dots"><span>...</span></li>
+<li class="number"><span>7</span></li>
+<li class="number"><a href="">8</a></li>
+<li class="next"><a href=""></a></li>
+</ul>
+</div>
+</div>
+<!-- Tab 4: Certificates -->
+<div id="certificates" class="tab-content">
+<div class="certificates-grid">
+<div class="arrows">
+<div class="arrow-btn prev"></div>
+<div class="arrow-btn next"></div>
+</div>
+<div class="swiper certificates-swiper">
+<div class="swiper-wrapper">
+<a href="files/ser1.jpg" class="swiper-slide cert-card">
+<img src="files/ser1.jpg" alt="Сертификат" class="cert-image">
+<h3 class="cert-title">Название</h3>
+<p class="cert-desc">Краткое описание на несколько строк этого изображения</p>
+</a>
+<a href="files/ser2.jpg" class="swiper-slide cert-card">
+<img src="files/ser2.jpg" alt="Сертификат" class="cert-image">
+<h3 class="cert-title">Название</h3>
+<p class="cert-desc">Краткое описание на несколько строк этого изображения</p>
+</a>
+<a href="files/ser3.jpg" class="swiper-slide cert-card">
+<img src="files/ser3.jpg" alt="Сертификат" class="cert-image">
+<h3 class="cert-title">Название</h3>
+<p class="cert-desc">Краткое описание на несколько строк этого изображения</p>
+</a>
+<a href="files/ser2.jpg" class="swiper-slide cert-card">
+<img src="files/ser2.jpg" alt="Сертификат" class="cert-image">
+<h3 class="cert-title">Название</h3>
+<p class="cert-desc">Краткое описание на несколько строк этого изображения</p>
+</a>
+<a href="files/ser3.jpg" class="swiper-slide cert-card">
+<img src="files/ser3.jpg" alt="Сертификат" class="cert-image">
+<h3 class="cert-title">Название</h3>
+<p class="cert-desc">Краткое описание на несколько строк этого изображения</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="contact-section">
+<h2 class="contact-title">Обратиться к врачу</h2>
+<form>
+<div class="form-row">
+<div class="form-group">
+<input type="text" placeholder="Ваше имя" required>
+</div>
+<div class="form-group">
+<input type="email" placeholder="Ваш email" required>
+</div>
+<div class="form-group">
+<input type="tel" placeholder="+7 (___) ___-__-__" required>
+</div>
+</div>
+<div class="radio-group">
+<label class="radio-item">
+<input type="radio" name="contact_type" value="appointment" checked>
+<span>Записаться на прием</span>
+</label>
+<label class="radio-item">
+<input type="radio" name="contact_type" value="question">
+<span>Задать вопрос</span>
+</label>
+</div>
+<div class="form-bottom">
+<div class="checkbox-group">
+<label class="checkbox-item">
+<input type="checkbox" required>
+<span>Я даю согласие на обработку персональных данных, в связи с <a href="#">политикой</a> в отношении обработки персональных данных</span>
+</label>
+<label class="checkbox-item">
+<input type="checkbox">
+<span>Согласие(на) получать информацию о новых продуктах, акциях и услугах на email и по номеру телефона</span>
+</label>
+</div>
+<button type="submit" class="btn-primary">Записаться на прием</button>
+</div>
+</form>
+</section>
+</div>
+</div></div>
+<footer class="footer">
+<div class="content-padding">
+<div class="block_inner">
+<div class="left">
+<div class="logo">
+<a href="">
+<img src="files/logo.png" alt="">
+</a>
+</div>
+<div class="time">
+<p>Понедельник-пятница: <strong>с 9:00 до 20:00</strong></p>
+<p>Суббота: <strong>с 10:00 до 18:00</strong></p>
+<p>Воскресенье: <strong>с 10:00 до 18:00</strong></p>
+</div>
+</div>
+<div class="service">
+<div class="name">Услуги </div>
+<ul>
+<li>
+<a href="">Программы ЭКО</a>
+<ul>
+<li><a href="">ЭКО</a></li>
+<li><a href="">ИКСИ</a></li>
+<li><a href="">Хетчинг</a></li>
+<li><a href="">Криоконсервация ооцитов</a></li>
+<li><a href="">Криоконсервация спермы</a></li>
+<li><a href="">ЭКО по ОМС </a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="links">
+<ul>
+<li><a href="">Лечение бесплодия</a></li>
+<li><a href="">Донорские программы</a></li>
+<li><a href="">Суррогатное материнство</a></li>
+<li><a href="">Гинекология</a></li>
+</ul>
+<div class="soc_block">
+<a href="">
+<img src="files/soc1.svg" alt="">
+</a>
+<a href="">
+<img src="files/tg.svg" alt="">
+</a>
+<a href="">
+<img src="files/vk.svg" alt="">
+</a>
+</div>
+</div>
+<div class="contacts_footer">
+<div class="title">Контакты</div>
+<div class="address">г. Москва ул. Бауманская,21   </div>
+<div class="phones">
+<div>
+<a href="tel:88002224058">8 (800) 222-40-58</a>
+</div>
+<div>
+<a href="tel:84992880645">8 (499) 288-06-45</a>
+</div>
+<a href="" class="wh">
+<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.086 0C5.41125 0 0 5.41125 0 12.086C0 14.7544 0.865547 17.2209 2.33016 19.2206L0.788203 23.779L5.59125 22.2792C7.46719 23.4766 9.69539 24.1713 12.086 24.1713C18.7608 24.1713 24.172 18.7601 24.172 12.0853C24.172 5.41055 18.7608 0 12.086 0Z" fill="#4CAF50"/>
+<path d="M11.0798 14.1012C10.3458 13.5429 8.60133 11.4595 8.64914 11.0384C8.69695 10.6172 9.93797 9.72703 9.92602 9.22922C9.91406 8.73141 8.80734 5.52445 7.80188 5.51461C6.79641 5.50476 4.9493 6.65086 5.07656 8.92266C5.20383 11.1945 7.09312 14.258 9.95203 16.4278C12.8109 18.5977 15.4273 19.4484 17.6231 18.5723C19.5666 17.7968 19.5954 15.7964 19.3268 15.4519C19.0589 15.1073 16.3723 13.7735 15.8808 13.8691C15.3893 13.9648 14.8753 15.5187 14.1005 15.6241C13.3256 15.7282 11.8139 14.6595 11.0798 14.1012Z" fill="white"/>
+</svg>
+</a>
+</div>
+<div class="soc_block">
+<a href="">
+<img src="files/soc1.svg" alt="">
+</a>
+<a href="">
+<img src="files/tg.svg" alt="">
+</a>
+<a href="">
+<img src="files/vk.svg" alt="">
+</a>
+</div>
+<div class="btns">
+<div class="btn_button call">Записаться на прием</div>
+<div class="btn_button online">Онлайн консультация</div>
+</div>
+</div>          
+</div>
+</div>
+<div class="footer_bottom">
+<div class="inner">© 2025 «За Рождение». Все права защищены  | <a href="">Карта сайта</a>  |  <a href="">Политика конфиденциальности.</a> Лицензия Л041-01137-77/00321328</div>
+</div>
+</footer>
+<div class="up_btn"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js" integrity="sha512-a/KwXZUMuN0N2aqT/nuvYp6mg1zKg8OfvovbIlh4ByLw+BJ4sDrJwQM/iSOd567gx+yS0pQixA4EnxBlHgrL6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/lightgallery-all.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

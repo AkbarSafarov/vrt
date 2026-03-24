@@ -408,4 +408,54 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     }
+
+    const tabs = document.querySelectorAll('.tab');
+
+    if(tabs) {
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                tab.classList.add('active');
+
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    }
+
+    const sliderCer= document.querySelector('.certificates-swiper');
+
+    if (sliderCer) {
+
+        const swiperL = new Swiper(sliderCer, {
+            slidesPerView: 3,
+            spaceBetween: 32,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".certificates-grid .arrow-btn.next",
+                prevEl: ".certificates-grid .arrow-btn.prev",
+            },
+            breakpoints: {
+                0: { slidesPerView: 'auto',spaceBetween: 10},
+                992: { slidesPerView: 2 },
+                1281: { slidesPerView: 3 }
+            }
+        });
+
+        lightGallery(sliderCer, {
+            selector: 'a',
+            download: false,
+            zoom: false,
+            fullScreen: false,
+            videojs: true
+        });
+    }
 });
