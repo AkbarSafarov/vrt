@@ -458,4 +458,109 @@ document.addEventListener("DOMContentLoaded", function() {
             videojs: true
         });
     }
+
+    const toggle = document.getElementById('contact-toggle');
+
+    if (toggle) {
+        const switchWrap = document.querySelector('.toggle-group');
+        const submitBtn = document.getElementById('submit-btn');
+
+        toggle.addEventListener('change', () => {
+            const isQuestion = toggle.checked;
+
+            submitBtn.textContent = isQuestion ? 'Задать вопрос' : 'Записаться на прием';
+            switchWrap.classList.toggle('opened');
+        });
+    }
+
+
+    const form = document.querySelector('.contact-section form');
+    if(form){
+        const emailInput = form.querySelector('input[type="email"]');
+        const telInput = form.querySelector('input[type="tel"]');
+        const checkboxRequired = form.querySelector('.checkbox-group .field.checkbox:first-child input[type="checkbox"]');
+
+        function showError(input, message) {
+            removeError(input);
+            const error = document.createElement('span');
+            error.className = 'field-error';
+            error.textContent = message;
+            input.closest('.form-group, .field, label') 
+                ? input.closest('.form-group, .field')?.appendChild(error) 
+                : input.parentNode.appendChild(error);
+        }
+
+        function removeError(input) {
+            const parent = input.closest('.form-group, .field');
+            const existing = parent?.querySelector('.field-error');
+            if (existing) existing.remove();
+        }
+
+        function validateEmail(value) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+        }
+
+        function validatePhone(value) {
+            return /^(\+7|8)[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/.test(value);
+        }
+
+        emailInput.addEventListener('blur', () => {
+            if (!emailInput.value) {
+                showError(emailInput, 'Введите email');
+            } else if (!validateEmail(emailInput.value)) {
+                showError(emailInput, 'Введите корректный email');
+            } else {
+                removeError(emailInput);
+            }
+        });
+
+        emailInput.addEventListener('input', () => {
+            if (validateEmail(emailInput.value)) removeError(emailInput);
+        });
+
+        telInput.addEventListener('blur', () => {
+            if (!telInput.value) {
+                showError(telInput, 'Введите номер телефона');
+            } else if (!validatePhone(telInput.value)) {
+                showError(telInput, 'Введите корректный номер телефона');
+            } else {
+                removeError(telInput);
+            }
+        });
+
+        telInput.addEventListener('input', () => {
+            if (validatePhone(telInput.value)) removeError(telInput);
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let valid = true;
+
+            if (!emailInput.value || !validateEmail(emailInput.value)) {
+                showError(emailInput, !emailInput.value ? 'Введите email' : 'Введите корректный email');
+                valid = false;
+            }
+
+            if (!telInput.value || !validatePhone(telInput.value)) {
+                showError(telInput, !telInput.value ? 'Введите номер телефона' : 'Введите корректный номер телефона');
+                valid = false;
+            }
+
+            if (!checkboxRequired.checked) {
+                showError(checkboxRequired, 'Необходимо дать согласие на обработку персональных данных');
+                valid = false;
+            } else {
+                removeError(checkboxRequired);
+            }
+
+            if (valid) {
+                // отправка формы
+            }
+        });
+
+        checkboxRequired.addEventListener('change', () => {
+            if (checkboxRequired.checked) removeError(checkboxRequired);
+        }); 
+    }
 });
+

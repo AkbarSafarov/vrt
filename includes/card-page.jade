@@ -7,6 +7,10 @@ include _header.jade
         <div class="header-card">
             <div class="container">
                 <div class="header-content">
+                    <div class="mobile_block">
+                        <div class="h1_title_mobile">Акина Олеся Анатольевна</div>
+                        <p class="specialty">Врач акушер-гинеколог, врач-репродуктолог, врач ультразвуковой диагностики</p>
+                    </div>
                     <div class="doctor-photo">
                         <img src="files/card.jpg" alt="Акина Олеся Анатольевна">
                     </div>
@@ -15,7 +19,7 @@ include _header.jade
                             <h1>Акина Олеся Анатольевна</h1>
                         </div>
                         <p class="specialty">Врач акушер-гинеколог, врач-репродуктолог, врач ультразвуковой диагностики</p>
-                        <button class="btn-primary">
+                        <button class="btn-primary btn-z">
                             <span>Записаться на прием</span>
                             <svg width="81" height="15" viewBox="0 0 81 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M80.7071 8.07107C81.0976 7.68055 81.0976 7.04739 80.7071 6.65686L74.3431 0.2929C73.9526 -0.0976243 73.3195 -0.0976243 72.9289 0.2929C72.5384 0.683424 72.5384 1.31659 72.9289 1.70711L78.5858 7.36397L72.9289 13.0208C72.5384 13.4113 72.5384 14.0445 72.9289 14.435C73.3195 14.8256 73.9526 14.8256 74.3431 14.435L80.7071 8.07107ZM0 7.36397V8.36397H80V7.36397V6.36397H0V7.36397Z" fill="white" />
@@ -226,28 +230,32 @@ include _header.jade
                         <input type="tel" placeholder="+7 (___) ___-__-__" required>
                     </div>
                 </div>
-                <div class="radio-group">
-                    <label class="radio-item">
-                        <input type="radio" name="contact_type" value="appointment" checked>
-                        <span>Записаться на прием</span>
-                    </label>
-                    <label class="radio-item">
-                        <input type="radio" name="contact_type" value="question">
-                        <span>Задать вопрос</span>
-                    </label>
-                </div>
                 <div class="form-bottom">
-                    <div class="checkbox-group">
-                        <label class="checkbox-item">
-                            <input type="checkbox" required>
-                            <span>Я даю согласие на обработку персональных данных, в связи с <a href="#">политикой</a> в отношении обработки персональных данных</span>
+                    <div class="toggle-group">
+                        <span id="label-left">Записаться на прием</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="contact-toggle">
+                            <span class="toggle-slider"></span>
                         </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox">
-                            <span>Согласие(на) получать информацию о новых продуктах, акциях и услугах на email и по номеру телефона</span>
-                        </label>
+                        <span id="label-right">Задать вопрос</span>
                     </div>
-                    <button type="submit" class="btn-primary">Записаться на прием</button>
+                    <div class="checkbox-group">
+                        <div class="field checkbox">
+                            <label>
+                                <input type="checkbox">
+                                <i></i>
+                                <span>Я даю согласие на обработку персональных данных, в связи с <a href="#">политикой</a> в отношении обработки персональных данных</span>
+                            </label>
+                        </div>
+                        <div class="field checkbox">
+                            <label>
+                                <input type="checkbox">
+                                <i></i>
+                                <span>Согласие(на) получать информацию о новых продуктах, акциях и услугах на email и по номеру телефона</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" id="submit-btn" class="btn_button btn-primary">Записаться на прием</button>
                 </div>
             </form>
         </section>
